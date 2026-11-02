@@ -1,0 +1,156 @@
+/* GENERAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111111;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background: #080808;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #c9a227;
+}
+
+header h1 {
+    color: #d4af37;
+    font-size: 22px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+/* HERO SECTION */
+#home {
+    min-height: 75vh;
+    padding: 100px 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.75)
+    );
+}
+
+#home h2 {
+    color: #d4af37;
+    font-size: clamp(32px, 5vw, 55px);
+    max-width: 650px;
+    margin-bottom: 20px;
+}
+
+#home p {
+    max-width: 550px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* GOLDEN BRICK BUTTON */
+#home a {
+    display: inline-block;
+    position: relative;
+    width: fit-content;
+    padding: 16px 30px;
+    background: linear-gradient(
+        145deg,
+        #f2d16b,
+        #c99b24,
+        #9b7015
+    );
+    color: #17110a;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #f5d77c;
+    border-radius: 3px;
+    box-shadow:
+        0 6px 0 #76520e,
+        0 10px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s ease;
+}
+
+#home a::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    width: 35%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.653);
+    transform: translateX(-50%);
+}
+
+#home a:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 9px 0 #76520e,
+        0 13px 18px rgba(0, 0, 0, 0.5);
+}
+
+#home a:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 #76520e;
+}
+
+/* CONTENT SECTIONS */
+main section:not(#home) {
+    padding: 70px 7%;
+    border-bottom: 1px solid #333333;
+}
+
+main section h2 {
+    color: #d4af37;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+/* FOOTER */
+footer {
+    background: #080808;
+    color: #bbbbbb;
+    text-align: center;
+    padding: 25px;
+}
+
+/* MOBILE DESIGN */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    #home {
+        min-height: 60vh;
+        padding: 70px 7%;
+    }
+}
